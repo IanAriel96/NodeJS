@@ -11,7 +11,7 @@ if [ ! -d "$REPO_DIR/.git" ]; then
 fi
 
 # Solicitar el nombre del proyecto
-read -p "Ingrese el nombre del proyecto: " PROJECT_NAME
+read -p "Ingrese el nombre del proyecto nuevo o para cargar updates: " PROJECT_NAME
 
 # Ruta del proyecto
 PROJECT_DIR="$REPO_DIR/$PROJECT_NAME"

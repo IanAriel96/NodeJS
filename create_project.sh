@@ -24,11 +24,11 @@ else
   mkdir "$PROJECT_DIR"
   cd "$PROJECT_DIR"
 
-  # Inicializar un nuevo proyecto de Node.js
-  npm init -y
+# Inicializar un nuevo proyecto de Node.js
+# npm init -y
 
   # Crear un archivo básico
-  echo "console.log('Hola Mundo desde $PROJECT_NAME');" > index.js
+  echo "console.log('Hello World from my $PROJECT_NAME');" > index.js
 fi
 
 # Ir al repositorio principal
@@ -36,7 +36,7 @@ cd "$REPO_DIR"
 
 # Agregar y hacer commit en Git
 git add .
-git commit -m "Actualización en proyecto: $PROJECT_NAME"
+git commit -m "Updated: $PROJECT_NAME"
 git push "$GIT_REMOTE" main
 
 echo "Proyecto '$PROJECT_NAME' actualizado y subido con éxito."

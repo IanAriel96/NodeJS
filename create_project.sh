@@ -19,6 +19,9 @@ PROJECT_DIR="$REPO_DIR/$PROJECT_NAME"
 # Verificar si la carpeta ya existe
 if [ -d "$PROJECT_DIR" ]; then
   echo "El proyecto '$PROJECT_NAME' ya existe. Agregando cambios..."
+  cd "$PROJECT_DIR"
+  rm -rf node_modules
+  cd ..
 else
   echo "Creando nuevo proyecto '$PROJECT_NAME'..."
   mkdir "$PROJECT_DIR"
@@ -28,7 +31,7 @@ else
 # npm init -y
 
   # Crear un archivo básico
-  echo "console.log('Hello World from my $PROJECT_NAME');" > index.js
+  echo "console.log('Hello World from my $PROJECT_NAME');" > app.js
 fi
 
 # Ir al repositorio principal
